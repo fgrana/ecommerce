@@ -1,30 +1,22 @@
-import { Card } from "../../components/card/Card"
-import { Pagination } from "../../components/pagination/Pagination"
+import CardList from "../../components/card/Cards";
+import { CardClass } from "../../util/Card";
 
 export default function Body(){
-    return (
-    <>
-    <div className="d-flex p-2">
-        <table className="table">
-            <thead>
-            <tr>
-                <th scope="col"><Card name="charizard" atk="15" def="15" spd="15" lif="30" /></th>
-                <th scope="col"><Card name="charizard" atk="15" def="15" spd="15" lif="30" /></th>
-                <th scope="col"><Card name="charizard" atk="15" def="15" spd="15" lif="30" /></th>
-                <th scope="col"><Card name="charizard" atk="15" def="15" spd="15" lif="30" /></th>
-            </tr>
-            </thead>
-            <thead>
-            <tr>
-                <th scope="col"><Card name="charizard" atk="15" def="15" spd="15" lif="30" /></th>
-                <th scope="col"><Card name="charizard" atk="15" def="15" spd="15" lif="30" /></th>
-                <th scope="col"><Card name="charizard" atk="15" def="15" spd="15" lif="30" /></th>
-                <th scope="col"><Card name="charizard" atk="15" def="15" spd="15" lif="30" /></th>
-            </tr>
-            </thead>
-        </table>
-        </div>
-        <Pagination />
-    </>
-    )
+
+  const charizardCard = new CardClass("Charizard", 15, 15, 15, 15);
+const ListC = [[charizardCard,charizardCard,charizardCard,charizardCard],
+[charizardCard,charizardCard,charizardCard,charizardCard],
+[charizardCard,charizardCard,charizardCard,charizardCard],
+[charizardCard,charizardCard,charizardCard,charizardCard]]
+
+  const pokemonList = ListC.map((crd) => {
+    return <CardList {...crd} />;})
+
+  return( <table>
+    <tbody>
+        {pokemonList}
+    </tbody>
+  </table> );
+
+
 }
