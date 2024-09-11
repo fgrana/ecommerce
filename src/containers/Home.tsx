@@ -1,17 +1,14 @@
-import Header from './Header/Header';
-import Body from './Body/Body'
-import Sidebar from './Sidebar/Sidebar';
-import './Home.css'
+import Header from "./Header/Header";
+import Sidebar from "./Sidebar/Sidebar";
 
-function Home(){
-   return (
-    <div className='container'>
-     <Header/>
-     <Sidebar />
-     <Body />
-     <p>footer</p>
-    </div>
-    );
-};
+function Home() {
+  return (
+    <>
+      <Header />
+      <Sidebar />
+      <p>footer</p>
+    </>
+  );
+}
 
-export default Home
+export default Home;

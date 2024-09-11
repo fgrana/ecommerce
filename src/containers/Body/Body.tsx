@@ -1,4 +1,5 @@
 import CardList from "../../components/card/Cards";
+import { Pagination } from "../../components/pagination/Pagination";
 import { CardClass } from "../../util/Card";
 
 export default function Body() {
@@ -16,8 +17,11 @@ export default function Body() {
   });
 
   return (
-    <table>
-      <tbody>{pokemonList}</tbody>
-    </table>
+    <>
+      <table>
+        <tbody>{pokemonList}</tbody>
+      </table>
+      <Pagination />
+    </>
   );
 }
