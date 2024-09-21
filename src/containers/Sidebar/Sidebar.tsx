@@ -1,5 +1,6 @@
 import Body from "../Body/Body";
 import SidebarSidebar from "./SidebarSidebar";
+import s from "./sidebar.module.css"
 type Props = {
   isActive?: boolean;
 };
@@ -7,7 +8,7 @@ type Props = {
 const Sidebar = (props: Props) => {
   return (
     <>
-      <div className="container-fluid">
+      <div className={s.sidebar}>
         <div className="row flex-nowrap">
           <SidebarSidebar />
           <div className="col py-3">
