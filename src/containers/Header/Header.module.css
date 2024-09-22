@@ -1,5 +1,10 @@
-.header {
+.stats {
   max-width: fit-content;
   margin-left: auto;
-  background-color: steelblue;
+  
+}
+.header {
+  max-width: auto;
+  border-bottom: 3px solid rgb(40, 76, 105);
+
 }

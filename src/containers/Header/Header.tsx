@@ -4,7 +4,7 @@ function Header() {
   return (
     <>
       <div className={header.header}>
-        <div className="sticky-top">
+        <div className={header.stats}>
           <div>
           <button type="button" className="btn btn-primary">
             Home

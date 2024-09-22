@@ -12,12 +12,16 @@ export function Card(props: CardClass) {
           alt="Charizard"
         />
         <h5 className="card-title">{props.name}</h5>
-
+        <th>Total: {props.total} </th>
+        <br />
         <th>atk: {props.atk} |</th>
         <th>def: {props.def}</th>
         <br />
-        <th>spd: {props.spd} |</th>
-        <th>lif: {props.lif}</th>
+        <th>spatk: {props.spatk} |</th>
+        <th>spdef: {props.spdef}</th>
+        <br />
+        <th>speed: {props.spd} |</th>
+        <th>HP: {props.hp}</th>
         <br />
         <Button text={"Go"} selected={true}></Button>
         <Button text={"Not"} selected={false}></Button>
