@@ -7,13 +7,6 @@ interface Post {
 
 interface Stat {
   base_stat: number
-  effort: number
-  stat: Stat2
-}
-
-interface Stat2 {
-  name: string
-  url: string
 }
 
 export class CardClass {
