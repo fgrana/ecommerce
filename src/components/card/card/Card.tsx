@@ -12,8 +12,6 @@ export function Card(props: CardClass) {
           alt="Charizard"
         />
         <h5 className="card-title">{props.name}</h5>
-        <th>Total: {props.total} </th>
-        <br />
         <th>atk: {props.atk} |</th>
         <th>def: {props.def}</th>
         <br />

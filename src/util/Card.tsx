@@ -1,21 +1,39 @@
+
+interface Post {
+  id: number
+  name: string
+  stats: Stat[]
+}
+
+interface Stat {
+  base_stat: number
+  effort: number
+  stat: Stat2
+}
+
+interface Stat2 {
+  name: string
+  url: string
+}
+
 export class CardClass {
   name: string;
-  total: number;
   hp: number;
   atk: number;
   def: number;
   spatk: number;
   spdef: number;
   spd: number;
-  constructor(name: string, total:number, hp:number, atk: number, def: number, spatk: number, spdef: number, spd: number) {
-    this.name = name;
-    this.total = total;
-    this.hp = hp;
-    this.atk = atk;
-    this.def = def;
-    this.spatk = spatk;
-    this.spdef = spdef;
-    this.spd = spd;
+  constructor(post:Post) {
+    this.name = post?.name;
+    this.hp = post?.stats[0].base_stat;
+    this.atk = post?.stats[1].base_stat;
+    this.def = post?.stats[2].base_stat;
+    this.spatk = post?.stats[3].base_stat;
+    this.spdef = post?.stats[4].base_stat;
+    this.spd = post?.stats[5].base_stat;
   }
+
+  // Puedes agregar métodos adicionales aquí si es necesario
 }
 

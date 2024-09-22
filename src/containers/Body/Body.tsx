@@ -6,47 +6,30 @@ import body from "./body.module.css";
 
 const BASE_URL = 'https://pokeapi.co/api/v2/'
 
-
-export interface Root {
+interface Post {
   id: number
   name: string
   stats: Stat[]
 }
 
-export interface Stat {
-  base_stat: number
-  effort: number
-  stat: Stat2
-}
-//---------------------------------------------------
-
-
-export interface pokemonList{
-  post: Post
-}
-
-export interface Post {
-  name: string
-  stats: Stat[]
-}
-
-export interface Stat {
+interface Stat {
   base_stat: number
   effort: number
   stat: Stat2
 }
 
-export interface Stat2 {
+interface Stat2 {
   name: string
   url: string
 }
+
 
 export default function Body() {
   const [page, setPage] = useState(0);
   const [posts, setPosts] = useState<Post>();
   useEffect(() => {
     const fetchPosts = async () => {
-        const response = await fetch(`${BASE_URL}pokemon/ditto`,{
+        const response = await fetch(`${BASE_URL}pokemon/charizard`,{
           method: "GET",
           headers: {
             "Access-Control-Allow-Origin" : "*",
@@ -59,10 +42,8 @@ export default function Body() {
     fetchPosts();
   }, [page]);
 
-  
-  console.log(posts?.name)
-  const charizardCard = new CardClass("Charizard", 534, 78, 84, 78, 109, 85, 100);
-  const SquirtleCard = new CardClass("Squirtle", 534, 78, 84, 78, 109, 85, 100);
+  const charizardCard = new CardClass(posts!);
+  const SquirtleCard = new CardClass(posts!);
   const ListC = [
     [charizardCard, SquirtleCard, charizardCard, charizardCard],
     [charizardCard, charizardCard, SquirtleCard, charizardCard],
