@@ -23,13 +23,14 @@ interface Stat2 {
   url: string
 }
 
+const pokemon = "charizard"
 
 export default function Body() {
   const [page, setPage] = useState(0);
   const [posts, setPosts] = useState<Post>();
   useEffect(() => {
     const fetchPosts = async () => {
-        const response = await fetch(`${BASE_URL}pokemon/charizard`,{
+        const response = await fetch(`${BASE_URL}pokemon/${pokemon}`,{
           method: "GET",
           headers: {
             "Access-Control-Allow-Origin" : "*",
