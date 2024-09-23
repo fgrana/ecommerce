@@ -1,11 +1,11 @@
 
-interface Post {
+export interface Post {
   id: number
   name: string
   stats: Stat[]
 }
 
-interface Stat {
+export interface Stat {
   base_stat: number
 }
 
