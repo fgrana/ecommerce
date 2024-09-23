@@ -1,7 +1,7 @@
 import CardList from "../../components/card/Cards";
 import { Pagination } from "../../components/pagination/Pagination";
 import { CardClass, Post } from "../../util/Card";
-import body from "./body.module.css";
+import table from "./table.module.css";
 import GetPokemon from "../../api/pokemon";
 
 
@@ -26,7 +26,7 @@ export default function Body() {
   });
 
   return (
-      <div className={body.body}>
+      <div className={table.table}>
         <table>
           <tbody>{pokemonList}</tbody>
         </table>

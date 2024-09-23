@@ -1,4 +1,4 @@
-import Body from "../Body/Body";
+import Body from "../table/table";
 import SidebarSidebar from "./SidebarSidebar";
 import s from "./sidebar.module.css"
 type Props = {
