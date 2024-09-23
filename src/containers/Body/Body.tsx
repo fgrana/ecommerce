@@ -30,7 +30,7 @@ export default function Body() {
         <table>
           <tbody>{pokemonList}</tbody>
         </table>
-        <Pagination page={"1"}/>
+        <Pagination />
       </div>
   );
 }

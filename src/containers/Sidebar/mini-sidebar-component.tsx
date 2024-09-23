@@ -9,7 +9,7 @@ const miniSidebarComponent = (props: Props) => {
     <li className="w-100">
       <a href="#" className="nav-link px-0">
         {" "}
-        <span className="d-none d-sm-inline">{props.text}</span> 1
+        <span className="d-none d-sm-inline">{props.text}</span>
       </a>
     </li>
   );

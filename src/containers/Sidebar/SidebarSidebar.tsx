@@ -10,17 +10,17 @@ const SidebarSidebar = (props: Props) => {
           href="/"
           className="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none"
         >
-          <span className="fs-5 d-none d-sm-inline">PokeGay</span>
+          <span className="fs-5 d-none d-sm-inline">Poke-project</span>
         </a>
         <ul
           className="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
           id="menu"
         >
-          <SidebarComponent text={"Customers"} minisidebar={["text"]} />
-          <SidebarComponent text={"Customers"} minisidebar={[]} />
-          <SidebarComponent text={"Customers"} minisidebar={[]} />
-          <SidebarComponent text={"Customers"} minisidebar={[]} />
-          <SidebarComponent text={"Customers"} minisidebar={[]} />
+          <SidebarComponent text={"Pokemon"} minisidebar={[]} />
+          <SidebarComponent text={"Trainers"} minisidebar={[]} />
+          <SidebarComponent text={"Items"} minisidebar={["pokeballs", "berrys"]} />
+          <SidebarComponent text={"Catch"} minisidebar={[]} />
+          <SidebarComponent text={"Pokedex"} minisidebar={[]} />
         </ul>
         <hr />
       </div>
