@@ -17,7 +17,7 @@ export default function Body() {
     [charizardCard, squirtleCard, charizardCard, charizardCard],
     [charizardCard, charizardCard, charizardCard, charizardCard],
     [charizardCard, charizardCard, charizardCard, charizardCard],
-    [charizardCard, charizardCard, charizardCard, charizardCard],
+    [charizardCard, charizardCard, charizardCard, squirtleCard],
   ];
   
 
@@ -26,11 +26,12 @@ export default function Body() {
   });
 
   return (
-      <div className={table.table}>
-        <table>
-          <tbody>{pokemonList}</tbody>
-        </table>
-        <Pagination />
+    <>
+    <div className={table.table}>
+        {pokemonList}
       </div>
+      <Pagination />
+    </>
+      
   );
 }
